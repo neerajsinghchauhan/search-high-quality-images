@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 
 # Collect static files
-set -e
+
 cd $(dirname "$0")
 
 # Logging
