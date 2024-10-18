@@ -11,9 +11,9 @@ echo "Installing dependencies from requirements.txt"
 pip install -r requirements.txt
 
 
-# Collect static files
 
-cd $(dirname "$0")
+
+
 
 # Logging
 echo "Current directory: $(pwd)"
