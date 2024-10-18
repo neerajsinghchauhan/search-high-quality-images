@@ -10,6 +10,9 @@ echo "Installing dependencies from requirements.txt"
 
 pip install -r requirements.txt
 
+# Navigate to the project directory
+cd my_blog
+
 # Collect static files
 python manage.py collectstatic --no-input
 
