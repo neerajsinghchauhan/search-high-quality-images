@@ -12,6 +12,13 @@ pip install -r requirements.txt
 
 
 # Collect static files
+set -e
+cd $(dirname "$0")
+
+# Logging
+echo "Current directory: $(pwd)"
+echo "loacating collectstatic from manage.py"
+
 python manage.py collectstatic --no-input
 
 # Run migrations
