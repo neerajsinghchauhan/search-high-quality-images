@@ -6,16 +6,8 @@ cd $(dirname "$0")
 # Logging
 echo "Current directory: $(pwd)"
 echo "Installing dependencies from requirements.txt"
-
-
 pip install -r requirements.txt
 
-
-
-
-
-
-# Logging
 echo "Current directory: $(pwd)"
 echo "loacating collectstatic from manage.py"
 
