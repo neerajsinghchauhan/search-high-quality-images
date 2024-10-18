@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Install dependencies
+set -o errexit
+
 pip install -r requirements.txt
 
 # Collect static files
