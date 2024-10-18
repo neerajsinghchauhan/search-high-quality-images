@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 # Install dependencies
-set -o errexit
+set -e
+cd $(dirname "$0")
+
+# Logging
+echo "Current directory: $(pwd)"
+echo "Installing dependencies from requirements.txt"
+
 
 pip install -r requirements.txt
 
