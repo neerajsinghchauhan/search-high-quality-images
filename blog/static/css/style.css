@@ -1,0 +1,119 @@
+/* blog/static/css/style.css */
+body {
+    background-color: rgb(246, 255, 224) !important;
+}
+
+
+h1 {
+    color: #343a40;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+/* css/style.css */
+body {
+    padding-top: 0;
+}
+
+.card {
+    margin-bottom: 0;
+}
+
+/* Push the authentication links (Login/Sign Up/Logout) to the far right */
+.authentication-links {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Style the nav links */
+.authentication-links .nav-link {
+    color: skyblue !important;  /* Sky blue text color */
+    font-weight: bold;          /* Make the text bold */
+}
+
+/* Add hover effect */
+.authentication-links .nav-link:hover {
+    color: darkblue !important;  /* Dark blue on hover */
+    text-decoration: underline;  /* Underline on hover */
+}
+
+/* Style the logout button */
+.authentication-links .btn-link {
+    text-decoration: none;       /* Remove underline from the button */
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none; /* Make the button look like a link */
+    color: #007bff; /* Match the link color (you can adjust this) */
+    cursor: pointer; /* Show pointer on hover like a link */
+    vertical-align: middle; /* Align vertically with other links */
+}
+
+/* Ensure the form behaves like an inline element */
+.nav-item form {
+    display: inline; /* Keep form in-line with other nav items */
+    margin: 0; /* Remove any margin around the form */
+    padding: 0; /* Remove padding */
+}
+
+/* Style the button inside the form to look like a link */
+.nav-item form button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none; /* Make the button look like a link */
+    color: #007bff; /* Match the link color (you can adjust this) */
+    cursor: pointer; /* Show pointer on hover like a link */
+    text-decoration: none; /* Remove the underline */
+    vertical-align: middle; /* Align vertically with other links */
+}
+
+.nav-item form button:hover {
+    text-decoration: underline; /* Add underline on hover, like a link */
+}
+
+.nav-item {
+    margin-left: 10px;
+}
+
+/* Styling for the buttons and links */
+.nav-link {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    color: #007bff;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+form button {
+    background: none;
+    border: none;
+    color: #007bff;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+form button:hover {
+    text-decoration: underline;
+}
+
+

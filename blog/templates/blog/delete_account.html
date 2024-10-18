@@ -1,0 +1,15 @@
+<!-- blog/templates/blog/delete_account.html -->
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Delete Your Account</h2>
+    <p>Are you sure you want to delete your account? This action cannot be undone.</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete My Account</button>
+        <a href="{% url 'index' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}
