@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Install dependencies
-set -e
-cd $(dirname "$0")
+
 
 # Logging
 echo "Current directory: $(pwd)"
