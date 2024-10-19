@@ -76,6 +76,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'my_blog.wsgi.application'
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_blog.settings')
+
 
 
 # Database
