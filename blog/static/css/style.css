@@ -1,4 +1,18 @@
 /* blog/static/css/style.css */
+/* Make navbar responsive */
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.navbar-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+
 body {
     background-color: rgb(246, 255, 224) !important;
 }
