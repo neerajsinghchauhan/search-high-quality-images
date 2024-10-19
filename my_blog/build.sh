@@ -1,35 +1,28 @@
 #!/usr/bin/env bash
 # Install dependencies
 set -e
-cd $(dirname "$0")  # Navigate to the directory where build.sh is located
 
-# Logging the current directory
+# Move to the directory where requirements.txt is located
+cd $(dirname "$0")
+
+# Logging
 echo "Current directory: $(pwd)"
+echo "Installing dependencies from requirements.txt"
+pip install -r requirements.txt
 
-# Check if requirements.txt exists
-if [ -f "requirements.txt" ]; then
-    echo "Found requirements.txt. Installing dependencies..."
-    pip install -r requirements.txt
-else
-    echo "Error: requirements.txt not found!"
-    exit 1
-fi
+# Move to the directory where manage.py is located (up one level)
+cd ..
 
-# Check if manage.py exists in the current directory
-if [ -f "manage.py" ]; then
-    echo "Found manage.py. Proceeding with collectstatic and migrations..."
-else
-    echo "Error: manage.py not found in the current directory!"
-    exit 1
-fi
+# Logging
+echo "Moved to directory: $(pwd)"
+echo "Running collectstatic from manage.py"
 
-# Collect static files
+# Run collectstatic and migrations
 python manage.py collectstatic --no-input
-
-# Run database migrations
 python manage.py migrate
 
-# Create superuser if required
-if [[ $CREATE_SUPERUSER ]]; then
+# Create superuser if the CREATE_SUPERUSER environment variable is set
+if [[ $CREATE_SUPERUSER ]];
+then
   python manage.py createsuperuser --no-input --email "$DJANGO_SUPERUSER_EMAIL"
 fi
